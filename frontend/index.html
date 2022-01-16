@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title>App test</title>
+  </head>
+  <body>
+    Fetching!
+
+    <button onclick="userAction()" value="Click me">
+
+    <script>
+      const userAction = async () => {
+        const response = await fetch('/api');
+        const myJson = await response.json(); //extract JSON from the http response
+
+        console.error(myJson)
+      }
+    </script>
+  </body>
+</html>
